@@ -12,15 +12,16 @@
   <body>
     <div class="container">
         <h1>Sitio Fácil - Nuevo</h1>
-
-        <form action="guardar.php" method="posts">
+<!--MRI: es method="post"-->
+        <form action="guardar.php" method="post">
   <label for="titulo">Título: </label>
   <input type="text" id="titulo" name="titulo"><br>
   <label for="descripcion">Descripción:</label>
   <input type="textarea" id="descripcion" name="descripcion" ><br>
   <input type="submit" value="Guardar">
 </form>
-        <a href="inde.php">Volver</a>
+<!-- MRI: la referencia esta mal escrita, es index.php-->
+        <a href="index.php">Volver</a>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

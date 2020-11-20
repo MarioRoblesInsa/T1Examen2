@@ -1,8 +1,7 @@
-<?php require_once 'utils.php'?>
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Ejercicio2-Mario</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,14 +10,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container">
-    <!-- MRI:Cambio $_pOST por GET
-    <h1><?php echo $_GET['nombre'] ?></h1>
+      <?php
+        $numAleatorio = random_int(1, 20);
 
-    <p><?php echo getPostHTML() ?></p>
-    <p><a href="index.php">Volver</a></p>
-    </div>
-
+        function generarParrafos($numAl){
+            $parrafos = "";
+            $texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+            $contenidoAleatorio = random_int(10, strlen($texto));
+            $contenido = substr($texto, $contenidoAleatorio);
+            for ($i=0; $i < $numAl; $i++) { 
+                $parrafos .= '<p>' .$contenido.'</p>';
+            }
+            return $parrafos;
+        }
+            echo generarParrafos($numAleatorio);
+      ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

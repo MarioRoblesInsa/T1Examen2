@@ -1,4 +1,5 @@
-<?php require_once 'util.php' ?>
+<!--MRI: aquí se hace referencia a util.php, cuando el fichero se llama utils.php, así que lo modifico-->
+<?php require_once 'utils.php' ?>
 
 <!doctype html>
 <html lang="en">
@@ -14,12 +15,12 @@
   <body>
     <div class="container">
         <h1>Sitio Fácil - Home</h1>
-
-        <p><a href="nuev.php">Nuevo</a></p>
-        
-        <?php echo ListPosts(); ?>
-
-        <?php RecentPosts(); ?>
+      <!--MRI:Se hace referencia a nuev.php, y el fichero se llama nuevo.php, lo modifico-->
+        <p><a href="nuevo.php">Nuevo</a></p>
+        <!--MRI: Esto no imprime nada por que la función ListPosts no existe, es getListPosts(), lo modifico-->
+        <?php echo getListPosts(); ?>
+<!-- MRI: la funcion es getRecentPosts() y le faltaba el echo
+        <?php echo getRecentPosts(); ?>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

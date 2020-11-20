@@ -13,12 +13,14 @@
   <body>
     <div class="container">
         <h1>Sitio Fácil - Nuevo</h1>
-
-        <form action="guardar.php" method="posts">
+  <!--MRI: es method="post"-->
+        <form action="guardar.php" method="post">
   <label for="titulo">Título: </label>
-  <input type="text" id="titulo" name="titulo" value="<?php echo $_GET['nombre'];?>"><br>
+  <!--Es $_GET['titulo']-->
+  <input type="text" id="titulo" name="titulo" value="<?php echo getPostContent($_GET['nombre']);?>"><br>
   <label for="descripcion">Descripción:</label>
-  <input type="textarea" id="descripcion" name="descripcion" value="<?php getPostContent($_POST['nombre']);?>"><br>
+  <!--MRI: Cambio $_POST por $_GET['descripcion']-->
+  <input type="textarea" id="descripcion" name="descripcion" value="<?php echo getPostContent($_GET['descripcion']);?>"><br>
   <input type="submit" value="Guardar">
 </form>
         <a href="index.php">Volver</a>
